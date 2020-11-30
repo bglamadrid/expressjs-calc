@@ -12,5 +12,7 @@ block content
     input(type="number", name="operand1", required)
     input(type="number", name="operand2", required)
     button(type="submit") Submit
-  div#result
-    p= resultValue
+  if resultValue
+    div#result
+      h2 The result is:
+      p= resultValue
