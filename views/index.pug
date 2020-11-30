@@ -3,3 +3,14 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  form#operations-form(method='POST')
+    select#sel-operation-type(name="operationType", required)
+      option(value="sum") Sum
+      option(value="sub") Subtract
+      option(value="mul") Multiply
+      option(value="div") Divide
+    input(type="number", name="operand1", required)
+    input(type="number", name="operand2", required)
+    button(type="submit") Submit
+  div#result
+    p= resultValue
